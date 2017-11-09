@@ -3,7 +3,32 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content padding="unset 15px" columnwidth="8" name="mainContent"></wm-page-content>
+        <wm-page-content padding="unset 15px" columnwidth="8" name="mainContent">
+            <wm-list navigation="Basic" dataset="bind:Variables.HrdbUserData.dataSet" name="UserList1" listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card">
+                <wm-listtemplate name="listtemplate1" layout="media">
+                    <wm-card name="card1">
+                        <wm-card-content name="card_content1" fontsize="0.8" fontunit="em">
+                            <wm-layoutgrid name="layoutgrid1" columns="2">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn name="gridcolumn1" colwidth="6" columnwidth="6" class="col-xs-6">
+                                        <wm-picture name="Picture" width="100%"></wm-picture>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn2" colwidth="6" columnwidth="6" padding="unset 1.25em" class="col-xs-6">
+                                        <wm-label name="ID" caption="ID" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Name" caption="Name" class="h4" margin="0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="JobTitle" caption="JobTitle" class="h5" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Department" caption="Department" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label name="Location" caption="Location" class="text-muted p" whitespace="nowrap"></wm-label>
+                                        <wm-anchor name="PhoneNumber" caption="" class="h5" hyperlink="tel:" margin="0px unset" whitespace="nowrap"></wm-anchor>
+                                        <wm-anchor name="EmailID" class="p text-muted" hyperlink="mailto://" caption="" whitespace="nowrap"></wm-anchor>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
